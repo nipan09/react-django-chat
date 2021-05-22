@@ -25,7 +25,7 @@ SECRET_KEY = 'c3f!u2lnl1#56w)9bc_s!68)e5zm3d5z+^552=#!%@_@yj-y83'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'chat',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ASGI_APPLICATION = "Django.asgi.application"
