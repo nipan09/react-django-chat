@@ -122,3 +122,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ASGI_APPLICATION = "Django.asgi.application"
+
+CHANNEL_LAYERS = {
+    "default" :{
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
